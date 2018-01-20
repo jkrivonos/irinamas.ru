@@ -1,0 +1,87 @@
+ body {
+    max-width:auto; 
+   }
+table { width="100%";
+         cellspacing="0";
+		  cellpadding="0";
+		 
+}
+
+p {
+	font: 110% serif;
+	color: #669; 
+	font-family: "rod";
+
+}
+ figcaption { font: 90% serif; 
+font-family: "rod"; /*Подписи картинок*/
+	color: #669; /* Цвет текста */
+	font-size: 24px;
+ }
+   .sign {
+    float: left; 
+    border: 0px solid #69C ; 
+    padding: 12px; 
+    margin: 10px 0 4px 5px; 
+    background: white; 
+	 
+	
+   }
+   .sign figcaption {
+    margin: 0 0 0px; 
+	
+   } 
+   
+ 
+   }
+   a :link {
+    color:#96F; 
+    padding: 20px; 
+	font-family: "rod";
+
+   }
+   a:hover {
+    background: #69C;
+    color: #ffe; 
+    font-family: "rod";
+
+   } 
+    /* A {
+		font: 110% serif;
+    color: #669; 
+    background: #FFF; 
+    padding: 0px; 
+	font-family: "rod";
+    font-size: 14pt;
+   }
+  */
+ .q {
+	font-size: 22px;
+}
+ .s12 {
+	font-size: 16px;
+}
+ .fig {
+    text-align: center;
+	font-family: "rod2";
+    
+   }
+ .tab {   width="63%" valign="top"}
+ .tab1 {width="9%" height="197"
+	text-align: center;
+} 
+.tab2 {width="28%";
+ valign="center"}
+
+.tab3 {valign="top";}
+.r {width: 75%;
+}
+.y {width: "9%";
+  height: "197";
+	font-family: "rod";
+	font-size: 16px;
+  vertical-align: 5px;
+   }
+.w {width:"300";}
+.vv {id:"back-top";
+ text-align: right;}

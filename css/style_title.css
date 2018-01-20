@@ -1,0 +1,179 @@
+﻿@font-face {
+    font-family: rod;
+    src: url("../font/MISTRAL.TTF");
+  }
+  @font-face {
+    font-family: rod2;
+    src: url("../font/Rod.ttf");
+  }
+
+
+body {
+    max-width:auto; 
+    margin-top:0;
+    padding-top:0px;
+    background: url("../images/additional/backgroundcolor.jpg") repeat;
+    -moz-background-size: 100%; 
+    -webkit-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%;
+    /* background-size:cover; */
+    
+ }
+ .mainContainer{
+    display:flex;
+    justify-content: space-around;   
+    
+}
+
+.mainContainerImage{
+    display:inline-block;
+    text-align: center;
+    margin:0;
+    padding:0;
+
+}
+
+div{position: relative;
+    float:none;
+    }   
+
+.imageTitle {  display:inline-block;
+    padding: 0px;
+    margin: -50px; /*расстояние между фотографиями*/ 
+    
+}
+.imageTitle {
+    position:relative;
+    overflow:hidden;
+    width: 400px;
+    height:300px;
+    margin-top: -10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding:30px;
+     
+}
+
+.imageTitle img {
+        -moz-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
+        }
+        
+.imageTitle img:hover{
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        
+        }
+.mainMenu{
+            
+    width: "9%";
+    text-decoration: none;
+    height: "197";
+    font-family: "El Messiri";
+    font-size: 18px;
+    vertical-align: 5px;
+    color: rgb(107, 101, 101);      
+        }
+
+.mainMenu:hover{
+    color:rgb(189, 93, 93);
+}        
+.wrap{
+    width: auto;
+    text-align: center;    
+    margin-left:65px;
+
+}
+.decor{
+    position:relative;
+    text-decoration: none;
+    display: inline-block;
+    margin:0px;
+    padding:0px;
+    height: "197";
+    font-family: "El Messiri";
+    font-size: 20px;
+    vertical-align: 5px;
+    color: rgb(107, 101, 101);
+    
+       
+}
+.decor li{
+    margin-right:250px; 
+    padding-left:150px;
+    
+}
+.decor a:hover{
+    color:rgb(189, 93, 93);
+    }
+.contactDecor{
+    font-family: "El Messiri";
+    font-size: 18px;
+    vertical-align: 5px;
+    color: rgb(107, 101, 101);
+    text-align: center;
+       
+}
+.contactDecor li{
+    font-family: "El Messiri";
+    font-size: 18px;
+    vertical-align: 5px;
+    color: rgb(107, 101, 101);
+    text-align: center;
+    padding:5px;
+    list-style-type:circle;
+     }
+.contacts{
+    font-family: "El Messiri";
+    font-size: 18px;
+    vertical-align: 5px;
+    color: rgb(107, 101, 101);
+    text-align: center;
+    padding:0px;
+    font-weight:bold; 
+    }
+.contactDecorwithout{
+    list-style-type: none;
+    font-family: "El Messiri";
+    font-size: 18px;
+    vertical-align: 5px;
+    color: rgb(107, 101, 101);
+    text-align: center;
+    padding:5px;       
+     }
+.center{
+    list-style-position:inside;
+}
+.contactDecorwithout li{
+    padding: 5px;
+}
+.decoration{
+    position:relative;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px;
+    padding:0px;
+    height: "197";
+    font-family: "El Messiri";
+    font-size: 20px;
+    vertical-align: 5px;
+    color: rgb(107, 101, 101);
+}
+.decoration li{
+    margin-left: 320px;
+}
+.wrapper{width:auto;
+    display:block;
+    box-sizing:border-box;
+    text-align:  center;
+}
+    .wrapper>div{
+    margin: 25px;
+    }
+    /* .wrapper>div img{
+        border:solid rgb(185, 170, 170) 10px;   
+    } */
