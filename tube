@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+     <script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+    <style>
+   @font-face {
+    font-family: CenturyGothic;
+    src: url(fonts/CenturyGothic.ttf);
+   }
+  </style>
+    <title>Magnitube 3.0</title>
+</head>
+<body>
+	<div class="wrapper">
+	 	<div class="container">
+	 		
+	 		<section class="content">
+	 			
+	 				<div class="search">
+	 					<div class="menu" v-on:click="visible=!visible"></div>
+	 					<div class="logo">
+	 						<img class="logoImg" src="logoWhite.png">
+						</div>
+	 					<div class="search_name">Magnitube</div>
+	 					<div class="search_area">
+	 						<div class="search_img_wrapper"><div class="search_img"></div></div>
+	 						<input class="search_input" type="text" placeholder="Поиск...">
+	 						<input class="lookfor_input" type="text" value="Найти">
+	 					</div>
+	 					<div class="profil_panel">
+	 						<div class="user_info">	
+			 					<div class="user_name">Малег Олег Олегович</div>
+			 					<div class="user_email">mOleg@gmail.com</div>
+			 				</div>	
+		 					<div class="user_circle">
+		 						<div class="user"></div>
+		 					</div>
+	 					</div>
+	 				</div>
+	 			<section class="sidebar" v-show="visible">
+	 			<a class="logo" style="text-align: center; padding-top:20px">Всем привет.<br> Это Магнитюб. Он предназначен для просмотра обучающего видео.</a>
+	 			<ul class="site-navigation">
+			        <li><a class="home" href="#">Главная</a></li>
+			        <li><a class="list" href="#">Категории</a></li>
+			        <li><a class="playlist" href="#">Плейлисты</a></li>
+			        <li><a class="heart" href="#">Избранное</a></li>
+			        <li><a class="plus" href="#">Добавить видео</a></li>
+			        <li><a class="statistic" href="#">Статистика</a></li>
+			    </ul>	
+			    <div class="rocket_icon"><img src="rocket_white.png"></div>
+	 		</section>
+	 			
+	 			<div class="content_video">
+	 				<div class="video_inner">
+	 					<div class="video_title">
+		 					<div class="textVideo">
+		 						<div class="textVideo_1">ММ</div>
+		 						<div class="textVideo_2">34
+		 							<div class="video_icon"></div>
+		 						</div>
+		 						<div class="textVideo_3">Посмотреть все</div>
+		 						<div class="arrow"></div>
+		 					</div>
+		 					<div class="currentVideo">
+				 				<div>
+				 					<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</span><br>
+				 							<span class="video_content_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</span>
+				 					</div>
+				 				</div>
+				 				<div>
+				 					<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 					
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">ВЗАИМОДЕЙСТВИЕ С ОСОБЕННЫМИ ПОКУПАТЕЛЯМИ</span><br>
+				 							<span class="video_content_3">Особенные покупатели составляют неотъемлимую часть наших клиентов</span>
+				 					
+				 					</div>
+				 				</div>
+								<div>
+									<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 						
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">ЛОКАЦИОННЫЕ УЛУЧШЕНИЯ</span><br>
+				 							<span class="video_content_3">Как правильно улучшить локацию продуктов для лучших продаж</span>
+				 					</div>
+								</div>
+								<div>
+									<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">ОПРЕДЕЛЕНИЕ ЧАСА ПИК В МАГАЗИНЕ</span><br>
+				 							<span class="video_content_3">Как правильно определить час пик</span>
+				 					</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	 			</div>
+
+	 			<div class="content_video">
+	 				<div class="video_inner">
+	 					<div class="video_title">
+		 					<div class="textVideo">
+		 						<div class="textVideo_1">АТП</div>
+		 						<div class="textVideo_2">29 
+		 							<div class="video_icon"></div>
+		 						</div>
+		 						<div class="textVideo_3">Посмотреть все</div>
+		 						<div class="arrow"></div>
+		 					</div>
+		 					<div class="currentVideo">
+				 					<div>
+				 					<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Выход из нестандартных ситуаций</span><br>
+				 							<span class="video_content_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</span>
+				 					</div>
+				 				</div>
+				 				<div>
+				 					<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 					
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Взаимодействие с особенными покупателями</span><br>
+				 							<span class="video_content_3">Особенные покупатели составляют неотъемлимую часть наших клиентов</span>
+				 					
+				 					</div>
+				 				</div>
+								<div>
+									<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 						
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Локационные улучшения</span><br>
+				 							<span class="video_content_3">Как правильно улучшить локацию продуктов для лучших продаж</span>
+				 					</div>
+								</div>
+								<div>
+									<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Определение часа пик в магазине</span><br>
+				 							<span class="video_content_3">Как правильно определить час пик</span>
+				 					</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	 			</div>
+
+	 			<div class="content_video">
+	 				<div class="video_inner">
+	 					<div class="video_title">
+		 					<div class="textVideo">
+		 						<div class="textVideo_1">НОВОЕ</div>
+		 						<div class="textVideo_2">25 
+		 							<div class="video_icon"></div>
+		 						</div>
+		 						<div class="textVideo_3" style="padding-left: 581px" >Посмотреть все</div>
+		 						<div class="arrow"></div>
+		 					</div>
+		 					<div class="currentVideo">
+				 				<div>
+				 					<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Выход из нестандартных ситуаций</span><br>
+				 							<span class="video_content_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</span>
+				 					</div>
+				 				</div>
+				 				<div>
+				 					<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 					
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Взаимодействие с особенными покупателями</span><br>
+				 							<span class="video_content_3">Особенные покупатели составляют неотъемлимую часть наших клиентов</span>
+				 					
+				 					</div>
+				 				</div>
+								<div>
+									<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 						
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Локационные улучшения</span><br>
+				 							<span class="video_content_3">Как правильно улучшить локацию продуктов для лучших продаж</span>
+				 					</div>
+								</div>
+								<div>
+									<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Определение часа пик в магазине</span><br>
+				 							<span class="video_content_3">Как правильно определить час пик</span>
+				 					</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	 			</div>
+
+	 			<div class="content_video">
+	 				<div class="video_inner">
+	 					<div class="video_title">
+		 					<div class="textVideo">
+		 						<div class="textVideo_1">ПОПУЛЯРНОЕ</div>
+		 						<div class="textVideo_2">22 
+		 							<div class="video_icon"></div>
+		 						</div>
+		 						<div class="textVideo_3" style="padding-left: 482px">Посмотреть все</div>
+		 						<div class="arrow"></div>
+		 					</div>
+		 					<div class="currentVideo">
+				 					<div>
+				 					<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Выход из нестандартных ситуаций</span><br>
+				 							<span class="video_content_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</span>
+				 					</div>
+				 				</div>
+				 				<div>
+				 					<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 					
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Взаимодействие с особенными покупателями</span><br>
+				 							<span class="video_content_3">Особенные покупатели составляют неотъемлимую часть наших клиентов</span>
+				 					
+				 					</div>
+				 				</div>
+								<div>
+									<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 						
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Локационные улучшения</span><br>
+				 							<span class="video_content_3">Как правильно улучшить локацию продуктов для лучших продаж</span>
+				 					</div>
+								</div>
+								<div>
+									<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Определение часа пик в магазине</span><br>
+				 							<span class="video_content_3">Как правильно определить час пик</span>
+				 					</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	 			</div>
+
+	 			<div class="content_video">
+	 				<div class="video_inner">
+	 					<div class="video_title">
+		 					<div class="textVideo">
+		 						<div class="textVideo_1">ПРОЧЕЕ</div>
+		 						<div class="textVideo_2">4 
+		 							<div class="video_icon"></div>
+		 						</div>
+		 						<div class="textVideo_3" style="padding-left: 581px">Посмотреть все</div>
+		 						<div class="arrow"></div>
+		 					</div>
+		 					<div class="currentVideo">
+				 					<div>
+				 					<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Выход из нестандартных ситуаций</span><br>
+				 							<span class="video_content_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</span>
+				 					</div>
+				 				</div>
+				 				<div>
+				 					<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 					
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Взаимодействие с особенными покупателями</span><br>
+				 							<span class="video_content_3">Особенные покупатели составляют неотъемлимую часть наших клиентов</span>
+				 					
+				 					</div>
+				 				</div>
+								<div>
+									<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 						
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Локационные улучшения</span><br>
+				 							<span class="video_content_3">Как правильно улучшить локацию продуктов для лучших продаж</span>
+				 					</div>
+								</div>
+								<div>
+									<div class="video">
+				 						<div class="video_time">3:50</div>
+				 					</div>	
+				 					<div class="video_content">
+				 							<span class="video_content_1">СРВК</span><br>
+				 							<span class="video_content_2">Определение часа пик в магазине</span><br>
+				 							<span class="video_content_3">Как правильно определить час пик</span>
+				 					</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	 			</div>
+	 			
+	 		</section>
+	 	</div>
+	 	<footer class="footer">
+	 		<div class="footer-inner">
+		 		<div class="footer-contacts">
+		 			<span style="font-weight: bolder;">Контакты ДУП по порталу</span>
+		 			<a href="mailto:portal@magnit.com" style="color: #e30613">portal@magnit.com</a>
+		 		</div>
+		 		<div class="footer-callback">
+		 			<div>Обратная связь</div>
+		 		</div>
+		 	</div>
+		 	<div class="footer-bar">
+		 		<div class="footer-inner">
+			 		<div class="footer_links">
+			 			<ul>
+			 				<li><a class="bold" href="#">ГЛАВНАЯ</a></li>
+			 				<li><a href="#">ММ</a></li>
+			 				<li><a href="#">АТП</a></li>
+			 				<li><a href="#">Новое</a></li>
+			 				<li><a href="#">Рекомендации</a></li>
+			 				<li><a href="#">Прочее</a></li>
+			 				<li><a class="tander" href="#">&copy;2018 ЗАО "Тандер"</a></li>
+			 			</ul>
+			 		</div>
+			 		<div>
+			 			<ul>
+			 				<li><a class="bold" href="#">КАТЕГОРИИ</a></li>
+			 				<li><a href="#">ММ</a></li>
+			 				<li><a href="#">АТП</a></li>
+			 			</ul>
+			 			<ul>	
+			 				<li><a class="bold" href="#">СЕРВИСЫ</a></li>
+			 				<li><a href="#">Общие</a></li>
+			 				<li><a href="#">Персональные</a></li>
+			 			</ul>
+			 		</div>		 		
+			 		<div>
+			 			<ul>
+			 				<li><a class="bold" href="#">ПЛЕЙЛИСТЫ</a></li>
+			 				<li><a href="#">Маркетинговые мероприятия</a></li>
+			 				<li><a href="#">Ситуационный центр</a></li>
+			 				<li><a href="#">Горячая линия Департамента <br> по контрольно-ревизионной работе</a></li>
+			 				<li><a href="#">Производственный календарь</a></li>
+			 				<li><a href="#">Контакт-центр Магнит</a></li>
+			 				<li><a href="#">Департмент управления персоналом</a></li>
+			 			</ul>
+			 		</div>
+			 		<div>
+			 			<ul>
+			 				<li><a class="bold" href="#">ИЗБРАННОЕ</a></li>
+			 				<li><a href="#">Сохраненное</a></li>
+			 				<li><a href="#">Просмотренные</a></li>
+			 			</ul>
+			 		</div>
+			 	</div>
+		 	</div>	
+	 	</footer>
+ 	</div>
+</body>
+<script>
+    var vm = new Vue({
+        el:'.wrapper',
+        data: {
+        	visible:true 
+        }
+})
+</script>
+</html>
+
+html{
+	height:100%;
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	font-family: 'Century Gothic';
+    font-weight: normal;
+    min-width: 960px;
+  	margin: 0;
+  	padding: 0;
+
+
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.container{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.menu{
+	width: 60px;
+	height: 60px;
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KICA8Zz4KICAgIDxnPgogICAgICA8cGF0aCBkPSJtOTEuNCwzMy41aC01My44Yy0yLjMsMC00LjEsMS44LTQuMSw0LjEgMCwyLjMgMS44LDQuMSA0LjEsNC4xaDUzLjljMi4zLDAgNC4xLTEuOCA0LjEtNC4xLTAuMS0yLjMtMS45LTQuMS00LjItNC4xeiIgZmlsbD0iI0ZGRkZGRiIvPgogICAgICA8cGF0aCBkPSJtOTEuNCw4Ny40aC01My44Yy0yLjMsMC00LjEsMS44LTQuMSw0LjEgMCwyLjMgMS44LDQuMSA0LjEsNC4xaDUzLjljMi4zLDAgNC4xLTEuOCA0LjEtNC4xLTAuMS0yLjMtMS45LTQuMS00LjItNC4xeiIgZmlsbD0iI0ZGRkZGRiIvPgogICAgICA8cGF0aCBkPSJtOTEuNCw2MC40aC01My44Yy0yLjMsMC00LjEsMS44LTQuMSw0LjEgMCwyLjMgMS44LDQuMSA0LjEsNC4xaDUzLjljMi4zLDAgNC4xLTEuOCA0LjEtNC4xLTAuMS0yLjMtMS45LTQuMS00LjItNC4xeiIgZmlsbD0iI0ZGRkZGRiIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==);
+	background-repeat: no-repeat;
+}
+.sidebar:before{
+	content: '';
+	position: fixed;
+	background-color: #000;
+	top: 0px;
+	width: 213px;
+	bottom: 0;
+	z-index: -1;
+}
+.sidebar{
+	width: 213px;
+	height: 100%;
+	background-color: #232428;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	position: fixed;
+	top:60px;
+}
+.sidebar div:first-child{
+	height: 140px;
+}
+.sidebar li:last-child{
+	border: solid 0.5px red;
+}
+.search_name{
+	font-weight: bold;
+	color: white;
+	width: 380px;
+	margin-left: 5px;
+}
+
+.search_input{
+	height: 30px;
+	width: 100%;
+	border: 0px;
+	padding-left: 10px;
+}
+.search_icon{
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border:0px;
+}
+.search_img{
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUyLjk2NiA1Mi45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUyLjk2NiA1Mi45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KPHBhdGggZD0iTTUxLjcwNCw1MS4yNzNMMzYuODQ1LDM1LjgyYzMuNzktMy44MDEsNi4xMzgtOS4wNDEsNi4xMzgtMTQuODJjMC0xMS41OC05LjQyLTIxLTIxLTIxcy0yMSw5LjQyLTIxLDIxczkuNDIsMjEsMjEsMjEgIGM1LjA4MywwLDkuNzQ4LTEuODE3LDEzLjM4NC00LjgzMmwxNC44OTUsMTUuNDkxYzAuMTk2LDAuMjA1LDAuNDU4LDAuMzA3LDAuNzIxLDAuMzA3YzAuMjUsMCwwLjQ5OS0wLjA5MywwLjY5My0wLjI3OSAgQzUyLjA3NCw1Mi4zMDQsNTIuMDg2LDUxLjY3MSw1MS43MDQsNTEuMjczeiBNMjEuOTgzLDQwYy0xMC40NzcsMC0xOS04LjUyMy0xOS0xOXM4LjUyMy0xOSwxOS0xOXMxOSw4LjUyMywxOSwxOSAgUzMyLjQ1OSw0MCwyMS45ODMsNDB6IiBmaWxsPSIjMDAwMDAwIi8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+	background-repeat: no-repeat;
+	background-position: 50% center;
+	width:40px; 
+	height: 32px; 
+	z-index: 1;
+}
+.search_img_wrapper{
+	width:30px; 
+	background-color: white; 
+	z-index: 0; 
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+.lookfor_input{
+	height: 30px;
+	border: 0px;
+	width: 10%;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	background-color: #9599a6;
+	padding-left: 55px;
+	color: white;
+	padding-right: 22px;
+}
+.search_area{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.logo{
+	display: flex;
+	height: 140px;
+}
+.logoImg{
+	width: 31%;
+	margin: auto;
+}
+.icon{
+	width: 30px;
+	margin-top:5px;
+
+}
+.content{
+	display: flex;
+	flex-direction: column;
+	width:100%;
+}
+.content_header{
+	width:100%;
+}
+.video_inner{
+	margin: auto;
+	display:flex;
+	flex-direction: row;
+}
+.video_title{
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	flex-wrap: wrap;
+}
+.video{
+	width: 220px;
+	height: 149px;
+	flex-shrink: 0;
+	border: solid 1px black;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-end;
+
+}
+.search{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #494a4f;
+	height: 60px;
+	margin-bottom: 20px;
+	z-index: 1;
+}
+.menu{
+	width: 60px;
+	height: 60px;
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KICA8Zz4KICAgIDxnPgogICAgICA8cGF0aCBkPSJtOTEuNCwzMy41aC01My44Yy0yLjMsMC00LjEsMS44LTQuMSw0LjEgMCwyLjMgMS44LDQuMSA0LjEsNC4xaDUzLjljMi4zLDAgNC4xLTEuOCA0LjEtNC4xLTAuMS0yLjMtMS45LTQuMS00LjItNC4xeiIgZmlsbD0iI0ZGRkZGRiIvPgogICAgICA8cGF0aCBkPSJtOTEuNCw4Ny40aC01My44Yy0yLjMsMC00LjEsMS44LTQuMSw0LjEgMCwyLjMgMS44LDQuMSA0LjEsNC4xaDUzLjljMi4zLDAgNC4xLTEuOCA0LjEtNC4xLTAuMS0yLjMtMS45LTQuMS00LjItNC4xeiIgZmlsbD0iI0ZGRkZGRiIvPgogICAgICA8cGF0aCBkPSJtOTEuNCw2MC40aC01My44Yy0yLjMsMC00LjEsMS44LTQuMSw0LjEgMCwyLjMgMS44LDQuMSA0LjEsNC4xaDUzLjljMi4zLDAgNC4xLTEuOCA0LjEtNC4xLTAuMS0yLjMtMS45LTQuMS00LjItNC4xeiIgZmlsbD0iI0ZGRkZGRiIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: #232428;
+}
+.content_video{
+	display: flex;
+	flex-direction: row;
+ 	width: 55%;
+ 	margin: auto;
+}
+.textVideo{
+	width:956px;
+	height: 35px;
+	margin-left:24px;
+	display: flex;
+	flex-direction: row;
+
+}
+.currentVideo{
+	display: flex;
+	flex-direction: row;
+	width: 1050px;
+	margin-left: 10px;
+	margin-right:10px;
+	margin-bottom:40px;
+}
+.currentVideo > div{
+	display: flex;
+	flex-direction: column;
+	width:220px;
+	height: 250px;
+	justify-content: space-between;
+	margin: 10px;
+	padding-left: 5px;
+}
+.textVideo_1{
+	font-size: 30px;
+	font-weight: bold;
+	margin-right:20px;
+}
+.textVideo_2{
+	font-size: 14px;
+	padding-left: 5px;
+	border-left: solid 1px black;
+	height: 35px;
+	line-height: 35px;
+	margin-right: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+}
+.textVideo_3{
+	font-size: 14px;
+	height: 35px; 
+	line-height: 35px;
+	padding-left: 630px;
+	margin-right:10px;
+}
+.arrow{
+	width: 25px;
+	height: 35px;
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMxLjQ5IDMxLjQ5IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMS40OSAzMS40OTsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8cGF0aCBkPSJNMjEuMjA1LDUuMDA3Yy0wLjQyOS0wLjQ0NC0xLjE0My0wLjQ0NC0xLjU4NywwYy0wLjQyOSwwLjQyOS0wLjQyOSwxLjE0MywwLDEuNTcxbDguMDQ3LDguMDQ3SDEuMTExICBDMC40OTIsMTQuNjI2LDAsMTUuMTE4LDAsMTUuNzM3YzAsMC42MTksMC40OTIsMS4xMjcsMS4xMTEsMS4xMjdoMjYuNTU0bC04LjA0Nyw4LjAzMmMtMC40MjksMC40NDQtMC40MjksMS4xNTksMCwxLjU4NyAgYzAuNDQ0LDAuNDQ0LDEuMTU5LDAuNDQ0LDEuNTg3LDBsOS45NTItOS45NTJjMC40NDQtMC40MjksMC40NDQtMS4xNDMsMC0xLjU3MUwyMS4yMDUsNS4wMDd6IiBmaWxsPSIjMDAwMDAwIi8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+	background-repeat: no-repeat;
+	margin-right: 0px;
+	height: 35px; 
+  	line-height: 35px;
+  	margin-top: 5px;
+
+}
+.rocket_icon img{
+	width: 90%;
+}
+.footer{
+	display:flex;
+	flex-direction: column;
+	height: 399px;
+	background-color: #212123;
+}
+.footer-inner{
+	display: flex;
+	flex-direction: row;
+	width: 970px;
+	margin-top:15px;
+	margin-left: 370px;
+	color: #999999;
+	font-size: 14px;
+	line-height: 20px;
+	justify-content: space-between;
+}
+.footer-inner span{
+	color: #fbfbfb;
+	font-size: 18px;
+	line-height: 20px;
+}
+.footer-contacts{
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	margin-left: 40px;
+}
+.footer-bar{
+	display: flex;
+	flex-direction: row;
+	border-top:solid white 1px;
+	padding-bottom: 20px;
+	margin-top:10px;
+}
+.footer-copyright{
+	color: red;
+	/*background-color: yellow;*/
+}
+.playlist {
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU4IDU4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1OCA1ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8Zz4KCTxwYXRoIGQ9Ik0zNi41MzcsMjguMTU2bC0xMS03Yy0wLjMwOC0wLjE5NS0wLjY5OC0wLjIwOC0xLjAxOS0wLjAzM0MyNC4xOTksMjEuMjk5LDI0LDIxLjYzNSwyNCwyMnYxNCAgIGMwLDAuMzY1LDAuMTk5LDAuNzAxLDAuNTE5LDAuODc3QzI0LjY2OSwzNi45NTksMjQuODM0LDM3LDI1LDM3YzAuMTg3LDAsMC4zNzQtMC4wNTMsMC41MzctMC4xNTZsMTEtNyAgIEMzNi44MjUsMjkuNjYsMzcsMjkuMzQyLDM3LDI5UzM2LjgyNSwyOC4zNCwzNi41MzcsMjguMTU2eiBNMjYsMzQuMTc5VjIzLjgyMUwzNC4xMzcsMjlMMjYsMzQuMTc5eiIgZmlsbD0iI0ZGRkZGRiIvPgoJPHBhdGggZD0iTTU3LDZINDdIMTFIMUMwLjQ0OCw2LDAsNi40NDcsMCw3djExdjExdjExdjExYzAsMC41NTMsMC40NDgsMSwxLDFoMTBoMzZoMTBjMC41NTIsMCwxLTAuNDQ3LDEtMVY0MFYyOVYxOFY3ICAgQzU4LDYuNDQ3LDU3LjU1Miw2LDU3LDZ6IE0xMCwyOEgydi05aDhWMjh6IE0yLDMwaDh2OUgyVjMweiBNMTIsNDBWMjlWMThWOGgzNHYxMHYxMXYxMXYxMEgxMlY0MHogTTU2LDI4aC04di05aDhWMjh6IE00OCwzMGg4djkgICBoLThWMzB6IE01Niw4djloLThWOEg1NnogTTIsOGg4djlIMlY4eiBNMiw1MHYtOWg4djlIMnogTTU2LDUwaC04di05aDhWNTB6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	margin-left: 15px;
+}
+.heart{
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3MS43MDEgNDcxLjcwMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDcxLjcwMSA0NzEuNzAxOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPHBhdGggZD0iTTQzMy42MDEsNjcuMDAxYy0yNC43LTI0LjctNTcuNC0zOC4yLTkyLjMtMzguMnMtNjcuNywxMy42LTkyLjQsMzguM2wtMTIuOSwxMi45bC0xMy4xLTEzLjEgICBjLTI0LjctMjQuNy01Ny42LTM4LjQtOTIuNS0zOC40Yy0zNC44LDAtNjcuNiwxMy42LTkyLjIsMzguMmMtMjQuNywyNC43LTM4LjMsNTcuNS0zOC4yLDkyLjRjMCwzNC45LDEzLjcsNjcuNiwzOC40LDkyLjMgICBsMTg3LjgsMTg3LjhjMi42LDIuNiw2LjEsNCw5LjUsNGMzLjQsMCw2LjktMS4zLDkuNS0zLjlsMTg4LjItMTg3LjVjMjQuNy0yNC43LDM4LjMtNTcuNSwzOC4zLTkyLjQgICBDNDcxLjgwMSwxMjQuNTAxLDQ1OC4zMDEsOTEuNzAxLDQzMy42MDEsNjcuMDAxeiBNNDE0LjQwMSwyMzIuNzAxbC0xNzguNywxNzhsLTE3OC4zLTE3OC4zYy0xOS42LTE5LjYtMzAuNC00NS42LTMwLjQtNzMuMyAgIHMxMC43LTUzLjcsMzAuMy03My4yYzE5LjUtMTkuNSw0NS41LTMwLjMsNzMuMS0zMC4zYzI3LjcsMCw1My44LDEwLjgsNzMuNCwzMC40bDIyLjYsMjIuNmM1LjMsNS4zLDEzLjgsNS4zLDE5LjEsMGwyMi40LTIyLjQgICBjMTkuNi0xOS42LDQ1LjctMzAuNCw3My4zLTMwLjRjMjcuNiwwLDUzLjYsMTAuOCw3My4yLDMwLjNjMTkuNiwxOS42LDMwLjMsNDUuNiwzMC4zLDczLjMgICBDNDQ0LjgwMSwxODcuMTAxLDQzNC4wMDEsMjEzLjEwMSw0MTQuNDAxLDIzMi43MDF6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	margin-left: 15px;
+	}
+.user{
+	width: 40px;
+	height: 40px;
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDM3LjAyLDMzMC45OGMtMjcuODgzLTI3Ljg4Mi02MS4wNzEtNDguNTIzLTk3LjI4MS02MS4wMThDMzc4LjUyMSwyNDMuMjUxLDQwNCwxOTguNTQ4LDQwNCwxNDggICAgQzQwNCw2Ni4zOTMsMzM3LjYwNywwLDI1NiwwUzEwOCw2Ni4zOTMsMTA4LDE0OGMwLDUwLjU0OCwyNS40NzksOTUuMjUxLDY0LjI2MiwxMjEuOTYyICAgIGMtMzYuMjEsMTIuNDk1LTY5LjM5OCwzMy4xMzYtOTcuMjgxLDYxLjAxOEMyNi42MjksMzc5LjMzMywwLDQ0My42MiwwLDUxMmg0MGMwLTExOS4xMDMsOTYuODk3LTIxNiwyMTYtMjE2czIxNiw5Ni44OTcsMjE2LDIxNiAgICBoNDBDNTEyLDQ0My42Miw0ODUuMzcxLDM3OS4zMzMsNDM3LjAyLDMzMC45OHogTTI1NiwyNTZjLTU5LjU1MSwwLTEwOC00OC40NDgtMTA4LTEwOFMxOTYuNDQ5LDQwLDI1Niw0MCAgICBjNTkuNTUxLDAsMTA4LDQ4LjQ0OCwxMDgsMTA4UzMxNS41NTEsMjU2LDI1NiwyNTZ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	}
+.user_circle{
+	width: 74px;
+	height: 60px;
+	display: flex;
+	border-radius: 50%;
+	align-items: center;
+}
+.user_name{
+	color: white;
+	vertical-align: middle;
+	text-align: end;
+}
+.user_email{
+	color: white;
+	vertical-align: middle;
+	text-align: end;
+}
+.user_info{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 200px;
+	font-size: 14px;
+	margin-right: 15px;
+}
+.user_menu{
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDM3LjAyLDMzMC45OGMtMjcuODgzLTI3Ljg4Mi02MS4wNzEtNDguNTIzLTk3LjI4MS02MS4wMThDMzc4LjUyMSwyNDMuMjUxLDQwNCwxOTguNTQ4LDQwNCwxNDggICAgQzQwNCw2Ni4zOTMsMzM3LjYwNywwLDI1NiwwUzEwOCw2Ni4zOTMsMTA4LDE0OGMwLDUwLjU0OCwyNS40NzksOTUuMjUxLDY0LjI2MiwxMjEuOTYyICAgIGMtMzYuMjEsMTIuNDk1LTY5LjM5OCwzMy4xMzYtOTcuMjgxLDYxLjAxOEMyNi42MjksMzc5LjMzMywwLDQ0My42MiwwLDUxMmg0MGMwLTExOS4xMDMsOTYuODk3LTIxNiwyMTYtMjE2czIxNiw5Ni44OTcsMjE2LDIxNiAgICBoNDBDNTEyLDQ0My42Miw0ODUuMzcxLDM3OS4zMzMsNDM3LjAyLDMzMC45OHogTTI1NiwyNTZjLTU5LjU1MSwwLTEwOC00OC40NDgtMTA4LTEwOFMxOTYuNDQ5LDQwLDI1Niw0MCAgICBjNTkuNTUxLDAsMTA4LDQ4LjQ0OCwxMDgsMTA4UzMxNS41NTEsMjU2LDI1NiwyNTZ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	}
+.plus{
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQyIDQyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MiA0MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8cG9seWdvbiBwb2ludHM9IjQyLDIwIDIyLDIwIDIyLDAgMjAsMCAyMCwyMCAwLDIwIDAsMjIgMjAsMjIgMjAsNDIgMjIsNDIgMjIsMjIgNDIsMjIgIiBmaWxsPSIjRkZGRkZGIi8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	margin-left: 15px;
+	}
+.home{
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU4LjM2NSA1OC4zNjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU4LjM2NSA1OC4zNjU7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KPHBhdGggZD0iTTU3Ljg2MywyNi42MzJsLTguNjgxLTguMDYxVjUuMzY1aC0xMHYzLjkyMUwyOS4xODIsMEwwLjUwMiwyNi42MzJjLTAuNDA0LDAuMzc2LTAuNDI4LDEuMDA5LTAuMDUyLDEuNDE0ICBjMC4zNzUsMC40MDQsMS4wMDgsMC40MjcsMS40MTQsMC4wNTJsMy4zMTktMy4wODJ2MzMuMzQ5aDE2aDE2aDE2VjI1LjAxNWwzLjMxOSwzLjA4MmMwLjE5MiwwLjE3OSwwLjQzNywwLjI2NywwLjY4MSwwLjI2NyAgYzAuMjY5LDAsMC41MzYtMC4xMDcsMC43MzItMC4zMTlDNTguMjkxLDI3LjY0MSw1OC4yNjcsMjcuMDA4LDU3Ljg2MywyNi42MzJ6IE00MS4xODIsNy4zNjVoNnY5LjM0OWwtNi01LjU3MVY3LjM2NXogICBNMjMuMTgyLDU2LjM2NVYzNS4zMDJjMC0wLjUxNywwLjQyLTAuOTM3LDAuOTM3LTAuOTM3aDEwLjEyNmMwLjUxNywwLDAuOTM3LDAuNDIsMC45MzcsMC45Mzd2MjEuMDYzSDIzLjE4MnogTTUxLjE4Miw1Ni4zNjVoLTE0ICBWMzUuMzAyYzAtMS42Mi0xLjMxNy0yLjkzNy0yLjkzNy0yLjkzN0gyNC4xMTljLTEuNjIsMC0yLjkzNywxLjMxNy0yLjkzNywyLjkzN3YyMS4wNjNoLTE0VjIzLjE1OGwyMi0yMC40MjlsMTQuMjgsMTMuMjYgIGw1LjcyLDUuMzExdjBsMiwxLjg1N1Y1Ni4zNjV6IiBmaWxsPSIjRkZGRkZGIi8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	margin-left: 15px;
+}
+.list{
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwIDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8Zz4KCTxwYXRoIGQ9Ik0zOC45MTQsMEg2LjV2NjBoNDdWMTQuNTg2TDM4LjkxNCwweiBNMzkuNSwzLjQxNEw1MC4wODYsMTRIMzkuNVYzLjQxNHogTTguNSw1OFYyaDI5djE0aDE0djQySDguNXoiIGZpbGw9IiNGRkZGRkYiLz4KCTxwYXRoIGQ9Ik00Mi41LDIxaC0xNmMtMC41NTIsMC0xLDAuNDQ3LTEsMXMwLjQ0OCwxLDEsMWgxNmMwLjU1MiwwLDEtMC40NDcsMS0xUzQzLjA1MiwyMSw0Mi41LDIxeiIgZmlsbD0iI0ZGRkZGRiIvPgoJPHBhdGggZD0iTTIyLjg3NSwxOC4yMTlsLTQuMzAxLDMuNDQxbC0xLjM2Ny0xLjM2N2MtMC4zOTEtMC4zOTEtMS4wMjMtMC4zOTEtMS40MTQsMHMtMC4zOTEsMS4wMjMsMCwxLjQxNGwyLDIgICBDMTcuOTg3LDIzLjkwMSwxOC4yNDMsMjQsMTguNSwyNGMwLjIyLDAsMC40NDEtMC4wNzIsMC42MjQtMC4yMTlsNS00YzAuNDMyLTAuMzQ2LDAuNTAxLTAuOTc1LDAuMTU2LTEuNDA2ICAgQzIzLjkzNiwxNy45NDMsMjMuMzA2LDE3Ljg3NCwyMi44NzUsMTguMjE5eiIgZmlsbD0iI0ZGRkZGRiIvPgoJPHBhdGggZD0iTTQyLjUsMzJoLTE2Yy0wLjU1MiwwLTEsMC40NDctMSwxczAuNDQ4LDEsMSwxaDE2YzAuNTUyLDAsMS0wLjQ0NywxLTFTNDMuMDUyLDMyLDQyLjUsMzJ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMjIuODc1LDI5LjIxOWwtNC4zMDEsMy40NDFsLTEuMzY3LTEuMzY3Yy0wLjM5MS0wLjM5MS0xLjAyMy0wLjM5MS0xLjQxNCwwcy0wLjM5MSwxLjAyMywwLDEuNDE0bDIsMiAgIEMxNy45ODcsMzQuOTAxLDE4LjI0MywzNSwxOC41LDM1YzAuMjIsMCwwLjQ0MS0wLjA3MiwwLjYyNC0wLjIxOWw1LTRjMC40MzItMC4zNDYsMC41MDEtMC45NzUsMC4xNTYtMS40MDYgICBDMjMuOTM2LDI4Ljk0MywyMy4zMDYsMjguODc0LDIyLjg3NSwyOS4yMTl6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNNDIuNSw0M2gtMTZjLTAuNTUyLDAtMSwwLjQ0Ny0xLDFzMC40NDgsMSwxLDFoMTZjMC41NTIsMCwxLTAuNDQ3LDEtMVM0My4wNTIsNDMsNDIuNSw0M3oiIGZpbGw9IiNGRkZGRkYiLz4KCTxwYXRoIGQ9Ik0yMi44NzUsNDAuMjE5bC00LjMwMSwzLjQ0MWwtMS4zNjctMS4zNjdjLTAuMzkxLTAuMzkxLTEuMDIzLTAuMzkxLTEuNDE0LDBzLTAuMzkxLDEuMDIzLDAsMS40MTRsMiwyICAgQzE3Ljk4Nyw0NS45MDEsMTguMjQzLDQ2LDE4LjUsNDZjMC4yMiwwLDAuNDQxLTAuMDcyLDAuNjI0LTAuMjE5bDUtNGMwLjQzMi0wLjM0NiwwLjUwMS0wLjk3NSwwLjE1Ni0xLjQwNiAgIEMyMy45MzYsMzkuOTQzLDIzLjMwNiwzOS44NzQsMjIuODc1LDQwLjIxOXoiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	margin-left: 15px;
+}
+.statistic{
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMjEuNDkzIDMyMS40OTMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyMS40OTMgMzIxLjQ5MzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yOTQuNTA3LDBjLTE0LjkzMywwLTI2Ljk4NywxMi4wNTMtMjYuOTg3LDI2Ljk4N3MxMi4wNTMsMjYuOTg3LDI2Ljk4NywyNi45ODdzMjYuOTg3LTEyLjA1MywyNi45ODctMjYuOTg3ICAgIEMzMjEuNDkzLDEyLjA1MywzMDkuNDQsMCwyOTQuNTA3LDB6IE0yOTQuNTA3LDQwLjEwN2MtNy4yNTMsMC0xMy4xMi01Ljg2Ny0xMy4xMi0xMy4xMmMwLTcuMjUzLDUuODY3LTEzLjEyLDEzLjEyLTEzLjEyICAgIGM3LjI1MywwLDEzLjEyLDUuODY3LDEzLjEyLDEzLjEyQzMwNy42MjcsMzQuMjQsMzAxLjc2LDQwLjEwNywyOTQuNTA3LDQwLjEwN3oiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yNi45ODcsMTUzLjgxM0MxMi4wNTMsMTUzLjgxMywwLDE2NS44NjcsMCwxODAuOHMxMi4wNTMsMjYuOTg3LDI2Ljk4NywyNi45ODdzMjYuOTg3LTEyLjA1MywyNi45ODctMjYuOTg3ICAgIFM0MS45MiwxNTMuODEzLDI2Ljk4NywxNTMuODEzeiBNMjYuOTg3LDE5My45MmMtNy4yNTMsMC0xMy4xMi01Ljg2Ny0xMy4xMi0xMy4xMnM1Ljg2Ny0xMy4xMiwxMy4xMi0xMy4xMiAgICBjNy4yNTMsMCwxMy4xMiw1Ljg2NywxMy4xMiwxMy4xMlMzNC4yNCwxOTMuOTIsMjYuOTg3LDE5My45MnoiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xMDcuMiw3My42Yy0xNC45MzMsMC0yNi45ODcsMTIuMDUzLTI2Ljk4NywyNi45ODdjMCwxNC45MzMsMTIuMDUzLDI2Ljk4NywyNi45ODcsMjYuOTg3ICAgIGMxNC45MzMsMCwyNi45ODctMTIuMDUzLDI2Ljk4Ny0yNi45ODdDMTM0LjE4Nyw4NS42NTMsMTIyLjEzMyw3My42LDEwNy4yLDczLjZ6IE0xMDcuMiwxMTMuNzA3Yy03LjI1MywwLTEzLjEyLTUuODY3LTEzLjEyLTEzLjEyICAgIGMwLTcuMjUzLDUuODY3LTEzLjEyLDEzLjEyLTEzLjEyYzcuMjUzLDAsMTMuMTIsNS44NjcsMTMuMTIsMTMuMTJDMTIwLjMyLDEwNy44NCwxMTQuNDUzLDExMy43MDcsMTA3LjIsMTEzLjcwN3oiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xNjQuMDUzLDEzMC40NTNjLTE0LjkzMywwLTI2Ljk4NywxMi4wNTMtMjYuOTg3LDI2Ljk4N2MwLDE0LjkzMywxMi4wNTMsMjYuOTg3LDI2Ljk4NywyNi45ODcgICAgczI2Ljk4Ny0xMi4wNTMsMjYuOTg3LTI2Ljk4N0MxOTEuMDQsMTQyLjUwNywxNzguOTg3LDEzMC40NTMsMTY0LjA1MywxMzAuNDUzeiBNMTY0LjA1MywxNzAuNTZjLTcuMjUzLDAtMTMuMTItNS44NjctMTMuMTItMTMuMTIgICAgczUuODY3LTEzLjEyLDEzLjEyLTEzLjEyYzcuMjUzLDAsMTMuMTIsNS44NjcsMTMuMTIsMTMuMTJTMTcxLjMwNywxNzAuNTYsMTY0LjA1MywxNzAuNTZ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQkKCQkJPHJlY3QgeD0iMTU3LjA5NiIgeT0iODUuMTg2IiB0cmFuc2Zvcm09Im1hdHJpeCgwLjcwNjQgLTAuNzA3OCAwLjcwNzggMC43MDY0IDIuMTA1NSAxODkuMzEzNikiIHdpZHRoPSIxNDQuMzE5IiBoZWlnaHQ9IjEzLjg2NyIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJCgkJCTxyZWN0IHg9IjEyOC43NzUiIHk9IjEwOC44MTYiIHRyYW5zZm9ybT0ibWF0cml4KDAuNzA1OCAtMC43MDg0IDAuNzA4NCAwLjcwNTggLTUxLjQ0MjUgMTM0LjA4MDgpIiB3aWR0aD0iMTMuODY3IiBoZWlnaHQ9IjQwLjMyIiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cmVjdCB4PSIzMC40OTkiIHk9IjEzMy43MTYiIHRyYW5zZm9ybT0ibWF0cml4KDAuNzA3MSAtMC43MDcxIDAuNzA3MSAwLjcwNzEgLTc5Ljc5IDg4LjY2OTMpIiB3aWR0aD0iNzMuMjc5IiBoZWlnaHQ9IjEzLjg2NyIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHJlY3QgeD0iMC4yMTMiIHk9IjMwNy42MjciIHdpZHRoPSIzMjEuMDY3IiBoZWlnaHQ9IjEzLjg2NyIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHJlY3QgeD0iMjg3LjU3MyIgeT0iMTEzLjkyIiB3aWR0aD0iMTMuODY3IiBoZWlnaHQ9IjIwMC42NCIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHJlY3QgeD0iMTYwLjUzMyIgeT0iMjE0LjI5MyIgd2lkdGg9IjEzLjg2NyIgaGVpZ2h0PSIxMDAuMjY3IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cmVjdCB4PSIyMC4wNTMiIHk9IjIzNC4zNDciIHdpZHRoPSIxMy44NjciIGhlaWdodD0iODAuMjEzIiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cmVjdCB4PSIxMDAuMjY3IiB5PSIxNzQuMDgiIHdpZHRoPSIxMy44NjciIGhlaWdodD0iMTQwLjQ4IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	margin-left: 15px;
+}
+.list1{
+	display: flex;
+	flex-direction: row
+}
+.searchIcon{
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ1MSA0NTEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ1MSA0NTE7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQ3LjA1LDQyOGwtMTA5LjYtMTA5LjZjMjkuNC0zMy44LDQ3LjItNzcuOSw0Ny4yLTEyNi4xQzM4NC42NSw4Ni4yLDI5OC4zNSwwLDE5Mi4zNSwwQzg2LjI1LDAsMC4wNSw4Ni4zLDAuMDUsMTkyLjMgICBzODYuMywxOTIuMywxOTIuMywxOTIuM2M0OC4yLDAsOTIuMy0xNy44LDEyNi4xLTQ3LjJMNDI4LjA1LDQ0N2MyLjYsMi42LDYuMSw0LDkuNSw0czYuOS0xLjMsOS41LTQgICBDNDUyLjI1LDQ0MS44LDQ1Mi4yNSw0MzMuMiw0NDcuMDUsNDI4eiBNMjYuOTUsMTkyLjNjMC05MS4yLDc0LjItMTY1LjMsMTY1LjMtMTY1LjNjOTEuMiwwLDE2NS4zLDc0LjIsMTY1LjMsMTY1LjMgICBzLTc0LjEsMTY1LjQtMTY1LjMsMTY1LjRDMTAxLjE1LDM1Ny43LDI2Ljk1LDI4My41LDI2Ljk1LDE5Mi4zeiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+.site-navigation{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	list-style: none;
+}
+
+.site-navigation li{
+	height: 44px;
+	width: 214px;
+	border-top: solid #e30613 0.5px;
+}
+.site-navigation li:hover{
+	border-right: solid #e30613 6px;
+}
+
+.site-navigation a{
+	text-decoration: none;
+	color: white;
+	display: block;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 55px;
+	vertical-align: middle;
+}
+.tander{
+	margin-top: 120px;
+}
+.footer-inner a{
+	text-decoration: none;
+	color: white;
+	display: block;
+	vertical-align: middle;
+}
+.footer-inner li{
+	list-style: none;
+
+}
+.video_content{
+	display: flex;
+	flex-direction: column;
+	height: 102px;
+}
+.video_description{
+	padding-left:5px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.video_content_1{
+	color: #e30613;
+	font-size: 12px;
+}
+.video_content_2{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px; 
+}
+.video_content_3{
+	font-size: 12px;
+	opacity: 0.56;
+	line-height: 16px; 	
+}
+.video_time{
+	background-color: #212123;
+	color: white;
+	opacity: 0.56;
+	height: 14px;
+	font-size: 10px;
+	padding: 2px;
+
+}
+.video_icon{
+	width: 60px;
+	height: 60px;
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU4IDU4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1OCA1ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgo8cGF0aCBkPSJNNTcsNkgxQzAuNDQ4LDYsMCw2LjQ0NywwLDd2NDRjMCwwLjU1MywwLjQ0OCwxLDEsMWg1NmMwLjU1MiwwLDEtMC40NDcsMS0xVjdDNTgsNi40NDcsNTcuNTUyLDYsNTcsNnogTTIsOGg4djlIMlY4eiAgIE0xMCw1MEgydi05aDhWNTB6IE01Niw1MGgtOHYtOWg4VjUweiBNNTYsMjhoLTh2Mmg4djloLTh2LTlIMTB2OUgydi05aDh2LTJIMnYtOWg4djloMzh2LTloOFYyOHogTTU2LDE3aC04VjhoOFYxN3oiIGZpbGw9IiMwMDAwMDAiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+	background-repeat: no-repeat;
+	background-position: 10% center;
+}
+
+.footer-callback{
+	display: flex;
+	width:210px;
+	height: 30px;
+	background-color: #e30613;
+	border-radius: 5px;
+	border-color:#e30613;
+	text-align: center;
+	cursor: pointer;
+	color: #fbfbfb;;
+	margin-left:237px;
+}
+.footer-callback > div{
+	margin:auto;
+}
+.footer_links{
+
+}
+.bold{
+	font-size: 14px;
+	color:#999999;
+	font-weight: bold;
+}
+.profil_panel{
+	display: flex;
+flex-direction: row;
+width: 390px;
+height: 60px;
+justify-content: flex-end;
+background-color: #232428;
+margin-left: 270px;
+}
