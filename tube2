@@ -1,797 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <link href="tube_style.css" rel="stylesheet">
-    <script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
-    <title>Title</title>
+	<title>todo components</title>
+	<link rel="stylesheet" href="style_tasks.css">
+<meta charset="utf-8" />
+<script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-<div class="wrapper">
-    <div class="search">
-        <div class="menu" v-on:click="visible=!visible"></div>
-        <div class="search_name">Magnitube</div>
-        <div class="search_area">
-            <div class="search_glass"></div>
-            <input class="search_input" type="text" placeholder="Поиск...">
-            <div class="search_find">Найти</div>
-        </div>
-        <div class="user_panel">
-            <div class="user_info">
-                <div class="user_name">Малег Олег Олегович</div>
-                <div class="user_email">mOleg@gmail.com</div>
-            </div>
-            <div class="user_circle">
-                <!--<div class="user">-->
-            </div>
-        </div>
-    </div>
-    <div class="content_wrapper">
-        <div class="sidebar" v-show="visible">
-            <a class="logo" style="text-align: center; padding-top:80px">Всем привет.<br> Это Магнитюб. Он предназначен для просмотра обучающего видео.</a>
-            <ul class="site-navigation">
-                <li><a class="home" href="#">Главная</a></li>
-                <li><a class="list" href="#">Категории</a></li>
-                <li><a class="playlist" href="#">Плейлисты</a></li>
-                <li><a class="heart" href="#">Избранное</a></li>
-                <li><a class="plus" href="#">Добавить видео</a></li>
-                <li><a class="statistic" href="#">Статистика</a></li>
-            </ul>
-            <div class="rocket_icon"><img src="rocket_white.png"></div>
-
-
-        </div>
-        <div class="container">
-            <div class="content">
-                <div class="category">
-                        <div class="category_title">
-                            <div class="category_title_inner">MM</div>
-                            <div class="category_title_count">34</div>
-                            <div class="category_title_watch_all">Посмотреть все</div>
-                        </div>
-                        <div class="category_video">
-                            <div class="category_video_element">
-                                <div class="video">
-                                    <div class="video_time">3:20
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <div class="description_1">СРВК</div>
-                                    <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                    <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                                </div>
-                            </div>
-                            <div class="category_video_element">
-                                <div class="video">
-                                    <div class="video_time">3:20
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <div class="description_1">СРВК</div>
-                                    <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                    <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                                </div>
-                            </div>
-                            <div class="category_video_element">
-                                <div class="video">
-                                    <div class="video_time">3:20
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <div class="description_1">СРВК</div>
-                                    <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                    <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                                </div>
-                            </div>
-                            <div class="category_video_element">
-                                <div class="video">
-                                    <div class="video_time">3:20
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <div class="description_1">СРВК</div>
-                                    <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                    <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                                </div>
-                            </div>
-                        </div>
-
-                </div>
-                <div class="category">
-                    <div class="category_title">
-                        <div class="category_title_inner">MM</div>
-                        <div class="category_title_count">34</div>
-                    </div>
-                    <div class="category_video">
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="category">
-                    <div class="category_title">
-                        <div class="category_title_inner">MM</div>
-                        <div class="category_title_count">34</div>
-                    </div>
-                    <div class="category_video">
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="category">
-                    <div class="category_title">
-                        <div class="category_title_inner">MM</div>
-                        <div class="category_title_count">34</div>
-                        <div class="category_title_count">Посмотреть все</div>
-                    </div>
-                    <div class="category_video">
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="category">
-                    <div class="category_title">
-                        <div class="category_title_inner">MM</div>
-                        <div class="category_title_count">34</div>
-                    </div>
-                    <div class="category_video">
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                        <div class="category_video_element">
-                            <div class="video">
-                                <div class="video_time">3:20
-                                </div>
-                            </div>
-                            <div class="description">
-                                <div class="description_1">СРВК</div>
-                                <div class="description_2">ВЫХОД ИЗ НЕСТАНДАРТНЫХ СИТУАЦИЙ</div>
-                                <div class="description_3">Как правильно выходить из нестандартных ситуаций при взаимодействии с людьми</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-            <div class="footer">
-                <div class="footer-inner">
-                    <div class="footer-contacts">
-                        <span style="font-weight: bolder;">Контакты ДУП по порталу</span>
-                        <a href="mailto:portal@magnit.com" style="color: #e30613">portal@magnit.com</a>
-                    </div>
-                    <div class="footer-callback">
-                        <div>Обратная связь</div>
-                    </div>
-                </div>
-                <div class="footer-bar">
-                    <div class="footer-inner">
-                        <div class="footer_links">
-                            <ul>
-                                <li><a class="bold" href="#">ГЛАВНАЯ</a></li>
-                                <li><a href="#">ММ</a></li>
-                                <li><a href="#">АТП</a></li>
-                                <li><a href="#">Новое</a></li>
-                                <li><a href="#">Рекомендации</a></li>
-                                <li><a href="#">Прочее</a></li>
-                                <li><a class="tander" href="#">&copy;218 ЗАО "Тандер"</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul>
-                                <li><a class="bold" href="#">КАТЕГОРИИ</a></li>
-                                <li><a href="#">ММ</a></li>
-                                <li><a href="#">АТП</a></li>
-                            </ul>
-                            <ul>
-                                <li><a class="bold" href="#">СЕРВИСЫ</a></li>
-                                <li><a href="#">Общие</a></li>
-                                <li><a href="#">Персональные</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul>
-                                <li><a class="bold" href="#">ПЛЕЙЛИСТЫ</a></li>
-                                <li><a href="#">Маркетинговые мероприятия</a></li>
-                                <li><a href="#">Ситуационный центр</a></li>
-                                <li><a href="#">Горячая линия Департамента <br> по контрольно-ревизионной работе</a></li>
-                                <li><a href="#">Производственный календарь</a></li>
-                                <li><a href="#">Контакт-центр Магнит</a></li>
-                                <li><a href="#">Департмент управления персоналом</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul>
-                                <li><a class="bold" href="#">ИЗБРАННОЕ</a></li>
-                                <li><a href="#">Сохраненное</a></li>
-                                <li><a href="#">Просмотренные</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+<div id="app">
+	<div class="wrapper">
+		<div class="content">
+				<taskinput v-bind:tasks="tasks"></taskinput>
+			<ul>
+				<taskitem v-for="(task,index) in tasks" 
+							v-bind:key="index"
+							v-bind:index="index"
+							v-bind:task="task"
+							v-on:task-delete="removeHandler"
+							>	
+				</taskitem>
+			</ul>		
+		</div>
+	</div>	
 </div>
+
 </body>
+<script type="text/x-template" id="todo-input-template">
+	<div class="content__input" v-on:keyup.13="addTask">
+		<input class="content__input_current-task" type="text" v-model="task.title" placeholder="Хотите добавить задание?">
+	</div>
+</script>
+<script type="text/x-template" id="todo-list-template">
+	<li class="todo-row">
+		<div class="todo-row__checkbox">
+			<input type="checkbox" v-on:change="changeInput">
+			<span v-show="task.editable" v-bind:class="{'todo-row__text_strike': task.checked}" class="todo-row__text">{{ task.title }}</span>
+			<input type="text" v-show="!task.editable" v-model="task.title">
+		</div>
+		<div class="todo-row__editable-btn">	
+			<img class="todo-row__image" src="pencil.png" v-on:click="editTask">
+			<img class="todo-row__image" src="delete.png" v-on:click="deleteCurrentTask(index)">	
+		</div>
+	</li>
+</script>
 <script>
-    var vm = new Vue({
-        el:'.wrapper',
-        data: {
-            visible:true
-        }
-    })
+	Vue.component('taskinput',{
+		props:["tasks"],
+		data: function(){
+			return{
+				task: {title:'', editable:true, checked:false}
+			}
+		},
+		template: '#todo-input-template',
+		methods: {
+			addTask: function(){
+				this.tasks.push({'title':this.task.title, 'editable':true, 'checked':false});
+				this.task.title = ''
+			}
+		}
+	})
+	Vue.component('taskitem', {
+
+		props:["task","index", "editable", "checked"],
+
+		template:'#todo-list-template',
+
+		methods:{
+			deleteCurrentTask: function(index){
+				 this.$emit('task-delete',index);
+			},
+			editTask: function(){
+				this.task.editable=!this.task.editable;
+			},
+			changeInput: function(){
+				this.task.checked=!this.task.checked
+			}
+		}
+		})
+	new Vue({
+		el:"#app",
+		data: {
+			tasks:[
+			{title:'1', editable:true, checked:false},
+			{title:'22222', editable:true, checked:false}
+			]
+		},
+		methods:{
+			removeHandler:function(index){
+				this.tasks.splice(index,1)
+			}
+		}
+	})	
 </script>
 </html>
-
-
-
-
-
-body{
-    padding: 0;
-    margin: 0;
-}
-.wrapper{
-    width: 99.8%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
-.search{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: #494a4f;
-    height: 60px;
-    z-index: 1;
-    position: fixed;
-    justify-content: space-between;
-}
-.search_name{
-    font-weight: bold;
-    color: white;
-    width: 300px;
-    height: 60px;
-    line-height: 60px;
-}
-.search_area{
-    width: 750px;
-    height: 30px;
-    display: flex;
-    align-self: center;
-}
-.search_glass{
-    width:50px;
-    height: 30px;
-    background-color: white;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-}
-.search_input{
-    height: 28px;
-    border: 0px;
-    width: 450px;
-}
-.search_find{
-    width:150px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    background-color: grey;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    color: white;
-}
-.user_panel{
-    display: flex;
-    height: 60px;
-    width: 250px;
-    background-color: #232428;
-}
-.menu{
-    width: 60px;
-    height: 60px;
-    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MCA1MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8Zz4KCTxyZWN0IHk9IjMiIHdpZHRoPSI1MCIgaGVpZ2h0PSIyIiBmaWxsPSIjRkZGRkZGIi8+Cgk8cmVjdCB5PSIxNyIgd2lkdGg9IjUwIiBoZWlnaHQ9IjIiIGZpbGw9IiNGRkZGRkYiLz4KCTxyZWN0IHk9IjMxIiB3aWR0aD0iNTAiIGhlaWdodD0iMiIgZmlsbD0iI0ZGRkZGRiIvPgoJPHJlY3QgeT0iNDUiIHdpZHRoPSI1MCIgaGVpZ2h0PSIyIiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: #232428;
-}
-.content_wrapper{
-    display: flex;
-}
-.container{
-    display: flex;
-    flex-direction: column;
-    flex-basis: 1050px;
-    flex-grow: 2;
-    width: 80%;
-    box-sizing: border-box;
-}
-.category{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    margin-bottom: 40px;
-
-}
-.category_video_element{
-    display: flex;
-    flex-direction: column;
-
-}
-category_video_element_inner{
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-.category_video{
-    display: flex;
-    justify-content:  space-between;
-    width: 100%;
-    min-height: 150px;
-    margin:auto;
-}
-.category_title{
-    display: flex;
-}
-.category_title_inner{
-    font-size: 30px;
-    font-weight: bold;
-    margin-right:20px;
-    padding-right: 5px;
-}
-.category_title_count{
-    font-size: 18px;
-    padding-left: 5px;
-    border-left: solid 1px black;
-    height: 35px;
-    line-height: 35px;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.category_title_watch_all{
-    font-size: 18px;
-    height: 36px;
-    line-height: 36px;
-    padding-left: 820px;
-}
-.video_element{
-    display: flex;
-    flex-direction: column;
-
-}
-.video{
-    display: flex;
-    width: 250px;
-    min-height: 150px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: solid grey 1px;
-    flex-shrink: 0;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-.description{
-    display: flex;
-    flex-direction: column;
-    width: 280px;
-}
-.description_1{
-    color: #e30613;
-    font-size: 12px;
-}
-.description_2{
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 20px;
-    text-transform: uppercase;
-}
-.description_3{
-    font-size: 12px;
-    opacity: 0.56;
-    line-height: 16px;
-}
-.video_time{
-    background-color: #212123;
-    color: white;
-    opacity: 0.56;
-    height: 14px;
-    font-size: 10px;
-    padding: 2px;
-
-}
-.sidebar{
-    width: 14%;
-    min-height: 685px;
-    height: 100%;
-    background-color: #232428;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    /*position: fixed;*/
-    top:60px;
-}
-.sidebar:before{
-    content: '';
-    /*position: fixed;*/
-    background-color: #232428;
-    top: 0px;
-    width: 14%;
-    bottom: 0;
-    z-index: -1;
-}
-.sidebar div:first-child{
-    height: 140px;
-}
-.sidebar li:last-child {
-    border-bottom: solid 0.5px red;
-}
-.logo{
-    display: flex;
-    height: 140px;
-}
-.site-navigation{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    list-style: none;
-}
-
-.site-navigation li{
-    height: 44px;
-    width: 214px;
-    border-top: solid #e30613 0.5px;
-}
-.site-navigation li:hover{
-    border-right: solid #e30613 6px;
-    font-weight: bold;
-}
-
-.site-navigation a{
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 55px;
-    vertical-align: middle;
-}
-.content{
-    min-height: 750px;
-    padding: 50px;
-    padding-top: 110px;
-}
-.footer{
-    width: 100%;
-    min-height: 300px;
-    background-color: #232428;
-}
-.footer-inner{
-    display: flex;
-    flex-direction: row;
-    width: 85%;
-    margin-top:15px;
-    color: #232428;
-    font-size: 14px;
-    line-height: 20px;
-    justify-content: space-between;
-}
-.footer-inner span{
-    color: #fbfbfb;
-    font-size: 18px;
-    line-height: 20px;
-}
-.footer-contacts{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    margin-left: 40px;
-}
-.footer-bar{
-    display: flex;
-    flex-direction: row;
-    border-top:solid white 1px;
-    padding-bottom: 20px;
-    margin-top:10px;
-}
-.footer-copyright{
-    color: red;
-    /*background-color: yellow;*/
-}
-
-
-
-.tander{
-    margin-top: 120px;
-}
-.footer-inner a{
-    text-decoration: none;
-    color: white;
-    display: block;
-    vertical-align: middle;
-}
-.footer-inner li{
-    list-style: none;
-
-}
-.footer-callback{
-    display: flex;
-    width:210px;
-    height: 30px;
-    background-color: #e30613;
-    border-radius: 5px;
-    border-color:#e30613;
-    text-align: center;
-    cursor: pointer;
-    color: #fbfbfb;;
-    margin-left:237px;
-}
-.footer-callback > div{
-    margin:auto;
-}
-.footer_links{
-
-}
-.bold{
-    font-size: 14px;
-    color:#232428;
-    font-weight: bold;
-}
-
-
-.playlist {
-    background-image: url(data:image/svgxml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU4IDU4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1OCA1ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8Zz4KCTxwYXRoIGQ9Ik0zNi41MzcsMjguMTU2bC0xMS03Yy0wLjMwOC0wLjE5NS0wLjY5OC0wLjIwOC0xLjAxOS0wLjAzM0MyNC4xOTksMjEuMjk5LDI0LDIxLjYzNSwyNCwyMnYxNCAgIGMwLDAuMzY1LDAuMTk5LDAuNzAxLDAuNTE5LDAuODc3QzI0LjY2OSwzNi45NTksMjQuODM0LDM3LDI1LDM3YzAuMTg3LDAsMC4zNzQtMC4wNTMsMC41MzctMC4xNTZsMTEtNyAgIEMzNi44MjUsMjkuNjYsMzcsMjkuMzQyLDM3LDI5UzM2LjgyNSwyOC4zNCwzNi41MzcsMjguMTU2eiBNMjYsMzQuMTc5VjIzLjgyMUwzNC4xMzcsMjlMMjYsMzQuMTc5eiIgZmlsbD0iI0ZGRkZGRiIvPgoJPHBhdGggZD0iTTU3LDZINDdIMTFIMUMwLjQ0OCw2LDAsNi40NDcsMCw3djExdjExdjExdjExYzAsMC41NTMsMC40NDgsMSwxLDFoMTBoMzZoMTBjMC41NTIsMCwxLTAuNDQ3LDEtMVY0MFYyOVYxOFY3ICAgQzU4LDYuNDQ3LDU3LjU1Miw2LDU3LDZ6IE0xMCwyOEgydi05aDhWMjh6IE0yLDMwaDh2OUgyVjMweiBNMTIsNDBWMjlWMThWOGgzNHYxMHYxMXYxMXYxMEgxMlY0MHogTTU2LDI4aC04di05aDhWMjh6IE00OCwzMGg4djkgICBoLThWMzB6IE01Niw4djloLThWOEg1NnogTTIsOGg4djlIMlY4eiBNMiw1MHYtOWg4djlIMnogTTU2LDUwaC04di05aDhWNTB6IiBmaWxsPSIjRkZGRkZGIi8CjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPC9zdmcCg==);
-    background-repeat: no-repeat;
-    background-position: 5px center;
-    margin-left: 15px;
-}
-.heart{
-    background-image: url(data:image/svgxml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3MS43MDEgNDcxLjcwMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDcxLjcwMSA0NzEuNzAxOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCICjxnPgoJPHBhdGggZD0iTTQzMy42MDEsNjcuMDAxYy0yNC43LTI0LjctNTcuNC0zOC4yLTkyLjMtMzguMnMtNjcuNywxMy42LTkyLjQsMzguM2wtMTIuOSwxMi45bC0xMy4xLTEzLjEgICBjLTI0LjctMjQuNy01Ny42LTM4LjQtOTIuNS0zOC40Yy0zNC44LDAtNjcuNiwxMy42LTkyLjIsMzguMmMtMjQuNywyNC43LTM4LjMsNTcuNS0zOC4yLDkyLjRjMCwzNC45LDEzLjcsNjcuNiwzOC40LDkyLjMgICBsMTg3LjgsMTg3LjhjMi42LDIuNiw2LjEsNCw5LjUsNGMzLjQsMCw2LjktMS4zLDkuNS0zLjlsMTg4LjItMTg3LjVjMjQuNy0yNC43LDM4LjMtNTcuNSwzOC4zLTkyLjQgICBDNDcxLjgwMSwxMjQuNTAxLDQ1OC4zMDEsOTEuNzAxLDQzMy42MDEsNjcuMDAxeiBNNDE0LjQwMSwyMzIuNzAxbC0xNzguNywxNzhsLTE3OC4zLTE3OC4zYy0xOS42LTE5LjYtMzAuNC00NS42LTMwLjQtNzMuMyAgIHMxMC43LTUzLjcsMzAuMy03My4yYzE5LjUtMTkuNSw0NS41LTMwLjMsNzMuMS0zMC4zYzI3LjcsMCw1My44LDEwLjgsNzMuNCwzMC40bDIyLjYsMjIuNmM1LjMsNS4zLDEzLjgsNS4zLDE5LjEsMGwyMi40LTIyLjQgICBjMTkuNi0xOS42LDQ1LjctMzAuNCw3My4zLTMwLjRjMjcuNiwwLDUzLjYsMTAuOCw3My4yLDMwLjNjMTkuNiwxOS42LDMwLjMsNDUuNiwzMC4zLDczLjMgICBDNDQ0LjgwMSwxODcuMTAxLDQzNC4wMDEsMjEzLjEwMSw0MTQuNDAxLDIzMi43MDF6IiBmaWxsPSIjRkZGRkZGIi8CjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPC9zdmcCg==);
-    background-repeat: no-repeat;
-    background-position: 5px center;
-    margin-left: 15px;
-}
-.user{
-    width: 40px;
-    height: 40px;
-    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDM3LjAyLDMzMC45OGMtMjcuODgzLTI3Ljg4Mi02MS4wNzEtNDguNTIzLTk3LjI4MS02MS4wMThDMzc4LjUyMSwyNDMuMjUxLDQwNCwxOTguNTQ4LDQwNCwxNDggICAgQzQwNCw2Ni4zOTMsMzM3LjYwNywwLDI1NiwwUzEwOCw2Ni4zOTMsMTA4LDE0OGMwLDUwLjU0OCwyNS40NzksOTUuMjUxLDY0LjI2MiwxMjEuOTYyICAgIGMtMzYuMjEsMTIuNDk1LTY5LjM5OCwzMy4xMzYtOTcuMjgxLDYxLjAxOEMyNi42MjksMzc5LjMzMywwLDQ0My42MiwwLDUxMmg0MGMwLTExOS4xMDMsOTYuODk3LTIxNiwyMTYtMjE2czIxNiw5Ni44OTcsMjE2LDIxNiAgICBoNDBDNTEyLDQ0My42Miw0ODUuMzcxLDM3OS4zMzMsNDM3LjAyLDMzMC45OHogTTI1NiwyNTZjLTU5LjU1MSwwLTEwOC00OC40NDgtMTA4LTEwOFMxOTYuNDQ5LDQwLDI1Niw0MCAgICBjNTkuNTUxLDAsMTA4LDQ4LjQ0OCwxMDgsMTA4UzMxNS41NTEsMjU2LDI1NiwyNTZ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    border-radius: 50%;
-}
-.user_circle{
-    width: 46px;
-    display: flex;
-    border-radius: 50%;
-    align-items: center;
-    border: solid 2px white;
-    background-color: #232428;
-    margin: 5px;
-}
-user_icon{
-    /*width: 50px;*/
-    /*height: 50px;*/
-    /*background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDM3LjAyLDMzMC45OGMtMjcuODgzLTI3Ljg4Mi02MS4wNzEtNDguNTIzLTk3LjI4MS02MS4wMThDMzc4LjUyMSwyNDMuMjUxLDQwNCwxOTguNTQ4LDQwNCwxNDggICAgQzQwNCw2Ni4zOTMsMzM3LjYwNywwLDI1NiwwUzEwOCw2Ni4zOTMsMTA4LDE0OGMwLDUwLjU0OCwyNS40NzksOTUuMjUxLDY0LjI2MiwxMjEuOTYyICAgIGMtMzYuMjEsMTIuNDk1LTY5LjM5OCwzMy4xMzYtOTcuMjgxLDYxLjAxOEMyNi42MjksMzc5LjMzMywwLDQ0My42MiwwLDUxMmg0MGMwLTExOS4xMDMsOTYuODk3LTIxNiwyMTYtMjE2czIxNiw5Ni44OTcsMjE2LDIxNiAgICBoNDBDNTEyLDQ0My42Miw0ODUuMzcxLDM3OS4zMzMsNDM3LjAyLDMzMC45OHogTTI1NiwyNTZjLTU5LjU1MSwwLTEwOC00OC40NDgtMTA4LTEwOFMxOTYuNDQ5LDQwLDI1Niw0MCAgICBjNTkuNTUxLDAsMTA4LDQ4LjQ0OCwxMDgsMTA4UzMxNS41NTEsMjU2LDI1NiwyNTZ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);*/
-    /*background-repeat: no-repeat;*/
-}
-.user_name{
-    color: white;
-    vertical-align: middle;
-    text-align: end;
-}
-.user_email{
-    color: white;
-    vertical-align: middle;
-    text-align: end;
-}
-.user_info{
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-    align-items: end;
-    justify-content: center;
-    background-color: #232428;
-    padding-left: 30px;
-}
-.user_menu{
-    background-image: url(data:image/svgxml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGcCgk8Zz4KCQk8cGF0aCBkPSJNNDM3LjAyLDMzMC45OGMtMjcuODgzLTI3Ljg4Mi02MS4wNzEtNDguNTIzLTk3LjI4MS02MS4wMThDMzc4LjUyMSwyNDMuMjUxLDQwNCwxOTguNTQ4LDQwNCwxNDggICAgQzQwNCw2Ni4zOTMsMzM3LjYwNywwLDI1NiwwUzEwOCw2Ni4zOTMsMTA4LDE0OGMwLDUwLjU0OCwyNS40NzksOTUuMjUxLDY0LjI2MiwxMjEuOTYyICAgIGMtMzYuMjEsMTIuNDk1LTY5LjM5OCwzMy4xMzYtOTcuMjgxLDYxLjAxOEMyNi42MjksMzc5LjMzMywwLDQ0My42MiwwLDUxMmg0MGMwLTExOS4xMDMsOTYuODk3LTIxNiwyMTYtMjE2czIxNiw5Ni44OTcsMjE2LDIxNiAgICBoNDBDNTEyLDQ0My42Miw0ODUuMzcxLDM3OS4zMzMsNDM3LjAyLDMzMC45OHogTTI1NiwyNTZjLTU5LjU1MSwwLTEwOC00OC40NDgtMTA4LTEwOFMxOTYuNDQ5LDQwLDI1Niw0MCAgICBjNTkuNTUxLDAsMTA4LDQ4LjQ0OCwxMDgsMTA4UzMxNS41NTEsMjU2LDI1NiwyNTZ6IiBmaWxsPSIjRkZGRkZGIi8Cgk8L2cCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPC9zdmcCg==);
-    background-repeat: no-repeat;
-    background-position: 5px center;
-}
-.plus{
-    background-image: url(data:image/svgxml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQyIDQyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MiA0MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8cG9seWdvbiBwb2ludHM9IjQyLDIwIDIyLDIwIDIyLDAgMjAsMCAyMCwyMCAwLDIwIDAsMjIgMjAsMjIgMjAsNDIgMjIsNDIgMjIsMjIgNDIsMjIgIiBmaWxsPSIjRkZGRkZGIi8CjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjwvc3ZnPgo=);
-    background-repeat: no-repeat;
-    background-position: 5px center;
-    margin-left: 15px;
-}
-.home{
-    background-image: url(data:image/svgxml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU4LjM2NSA1OC4zNjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU4LjM2NSA1OC4zNjU7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KPHBhdGggZD0iTTU3Ljg2MywyNi42MzJsLTguNjgxLTguMDYxVjUuMzY1aC0xMHYzLjkyMUwyOS4xODIsMEwwLjUwMiwyNi42MzJjLTAuNDA0LDAuMzc2LTAuNDI4LDEuMDA5LTAuMDUyLDEuNDE0ICBjMC4zNzUsMC40MDQsMS4wMDgsMC40MjcsMS40MTQsMC4wNTJsMy4zMTktMy4wODJ2MzMuMzQ5aDE2aDE2aDE2VjI1LjAxNWwzLjMxOSwzLjA4MmMwLjE5MiwwLjE3OSwwLjQzNywwLjI2NywwLjY4MSwwLjI2NyAgYzAuMjY5LDAsMC41MzYtMC4xMDcsMC43MzItMC4zMTlDNTguMjkxLDI3LjY0MSw1OC4yNjcsMjcuMDA4LDU3Ljg2MywyNi42MzJ6IE00MS4xODIsNy4zNjVoNnY5LjM0OWwtNi01LjU3MVY3LjM2NXogICBNMjMuMTgyLDU2LjM2NVYzNS4zMDJjMC0wLjUxNywwLjQyLTAuOTM3LDAuOTM3LTAuOTM3aDEwLjEyNmMwLjUxNywwLDAuOTM3LDAuNDIsMC45MzcsMC45Mzd2MjEuMDYzSDIzLjE4MnogTTUxLjE4Miw1Ni4zNjVoLTE0ICBWMzUuMzAyYzAtMS42Mi0xLjMxNy0yLjkzNy0yLjkzNy0yLjkzN0gyNC4xMTljLTEuNjIsMC0yLjkzNywxLjMxNy0yLjkzNywyLjkzN3YyMS4wNjNoLTE0VjIzLjE1OGwyMi0yMC40MjlsMTQuMjgsMTMuMjYgIGw1LjcyLDUuMzExdjBsMiwxLjg1N1Y1Ni4zNjV6IiBmaWxsPSIjRkZGRkZGIi8CjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjxnPgo8L2cCjwvc3ZnPgo=);
-    background-repeat: no-repeat;
-    background-position: 5px center;
-    margin-left: 15px;
-}
-.list{
-    background-image: url(data:image/svgxml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwIDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8Zz4KCTxwYXRoIGQ9Ik0zOC45MTQsMEg2LjV2NjBoNDdWMTQuNTg2TDM4LjkxNCwweiBNMzkuNSwzLjQxNEw1MC4wODYsMTRIMzkuNVYzLjQxNHogTTguNSw1OFYyaDI5djE0aDE0djQySDguNXoiIGZpbGw9IiNGRkZGRkYiLz4KCTxwYXRoIGQ9Ik00Mi41LDIxaC0xNmMtMC41NTIsMC0xLDAuNDQ3LTEsMXMwLjQ0OCwxLDEsMWgxNmMwLjU1MiwwLDEtMC40NDcsMS0xUzQzLjA1MiwyMSw0Mi41LDIxeiIgZmlsbD0iI0ZGRkZGRiIvPgoJPHBhdGggZD0iTTIyLjg3NSwxOC4yMTlsLTQuMzAxLDMuNDQxbC0xLjM2Ny0xLjM2N2MtMC4zOTEtMC4zOTEtMS4wMjMtMC4zOTEtMS40MTQsMHMtMC4zOTEsMS4wMjMsMCwxLjQxNGwyLDIgICBDMTcuOTg3LDIzLjkwMSwxOC4yNDMsMjQsMTguNSwyNGMwLjIyLDAsMC40NDEtMC4wNzIsMC42MjQtMC4yMTlsNS00YzAuNDMyLTAuMzQ2LDAuNTAxLTAuOTc1LDAuMTU2LTEuNDA2ICAgQzIzLjkzNiwxNy45NDMsMjMuMzA2LDE3Ljg3NCwyMi44NzUsMTguMjE5eiIgZmlsbD0iI0ZGRkZGRiIvPgoJPHBhdGggZD0iTTQyLjUsMzJoLTE2Yy0wLjU1MiwwLTEsMC40NDctMSwxczAuNDQ4LDEsMSwxaDE2YzAuNTUyLDAsMS0wLjQ0NywxLTFTNDMuMDUyLDMyLDQyLjUsMzJ6IiBmaWxsPSIjRkZGRkZGIi8Cgk8cGF0aCBkPSJNMjIuODc1LDI5LjIxOWwtNC4zMDEsMy40NDFsLTEuMzY3LTEuMzY3Yy0wLjM5MS0wLjM5MS0xLjAyMy0wLjM5MS0xLjQxNCwwcy0wLjM5MSwxLjAyMywwLDEuNDE0bDIsMiAgIEMxNy45ODcsMzQuOTAxLDE4LjI0MywzNSwxOC41LDM1YzAuMjIsMCwwLjQ0MS0wLjA3MiwwLjYyNC0wLjIxOWw1LTRjMC40MzItMC4zNDYsMC41MDEtMC45NzUsMC4xNTYtMS40MDYgICBDMjMuOTM2LDI4Ljk0MywyMy4zMDYsMjguODc0LDIyLjg3NSwyOS4yMTl6IiBmaWxsPSIjRkZGRkZGIi8Cgk8cGF0aCBkPSJNNDIuNSw0M2gtMTZjLTAuNTUyLDAtMSwwLjQ0Ny0xLDFzMC40NDgsMSwxLDFoMTZjMC41NTIsMCwxLTAuNDQ3LDEtMVM0My4wNTIsNDMsNDIuNSw0M3oiIGZpbGw9IiNGRkZGRkYiLz4KCTxwYXRoIGQ9Ik0yMi44NzUsNDAuMjE5bC00LjMwMSwzLjQ0MWwtMS4zNjctMS4zNjdjLTAuMzkxLTAuMzkxLTEuMDIzLTAuMzkxLTEuNDE0LDBzLTAuMzkxLDEuMDIzLDAsMS40MTRsMiwyICAgQzE3Ljk4Nyw0NS45MDEsMTguMjQzLDQ2LDE4LjUsNDZjMC4yMiwwLDAuNDQxLTAuMDcyLDAuNjI0LTAuMjE5bDUtNGMwLjQzMi0wLjM0NiwwLjUwMS0wLjk3NSwwLjE1Ni0xLjQwNiAgIEMyMy45MzYsMzkuOTQzLDIzLjMwNiwzOS44NzQsMjIuODc1LDQwLjIxOXoiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
-    background-repeat: no-repeat;
-    background-position: 5px center;
-    margin-left: 15px;
-}
-.statistic{
-    background-image: url(data:image/svgxml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMjEuNDkzIDMyMS40OTMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyMS40OTMgMzIxLjQ5MzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yOTQuNTA3LDBjLTE0LjkzMywwLTI2Ljk4NywxMi4wNTMtMjYuOTg3LDI2Ljk4N3MxMi4wNTMsMjYuOTg3LDI2Ljk4NywyNi45ODdzMjYuOTg3LTEyLjA1MywyNi45ODctMjYuOTg3ICAgIEMzMjEuNDkzLDEyLjA1MywzMDkuNDQsMCwyOTQuNTA3LDB6IE0yOTQuNTA3LDQwLjEwN2MtNy4yNTMsMC0xMy4xMi01Ljg2Ny0xMy4xMi0xMy4xMmMwLTcuMjUzLDUuODY3LTEzLjEyLDEzLjEyLTEzLjEyICAgIGM3LjI1MywwLDEzLjEyLDUuODY3LDEzLjEyLDEzLjEyQzMwNy42MjcsMzQuMjQsMzAxLjc2LDQwLjEwNywyOTQuNTA3LDQwLjEwN3oiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yNi45ODcsMTUzLjgxM0MxMi4wNTMsMTUzLjgxMywwLDE2NS44NjcsMCwxODAuOHMxMi4wNTMsMjYuOTg3LDI2Ljk4NywyNi45ODdzMjYuOTg3LTEyLjA1MywyNi45ODctMjYuOTg3ICAgIFM0MS45MiwxNTMuODEzLDI2Ljk4NywxNTMuODEzeiBNMjYuOTg3LDE5My45MmMtNy4yNTMsMC0xMy4xMi01Ljg2Ny0xMy4xMi0xMy4xMnM1Ljg2Ny0xMy4xMiwxMy4xMi0xMy4xMiAgICBjNy4yNTMsMCwxMy4xMiw1Ljg2NywxMy4xMiwxMy4xMlMzNC4yNCwxOTMuOTIsMjYuOTg3LDE5My45MnoiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xMDcuMiw3My42Yy0xNC45MzMsMC0yNi45ODcsMTIuMDUzLTI2Ljk4NywyNi45ODdjMCwxNC45MzMsMTIuMDUzLDI2Ljk4NywyNi45ODcsMjYuOTg3ICAgIGMxNC45MzMsMCwyNi45ODctMTIuMDUzLDI2Ljk4Ny0yNi45ODdDMTM0LjE4Nyw4NS42NTMsMTIyLjEzMyw3My42LDEwNy4yLDczLjZ6IE0xMDcuMiwxMTMuNzA3Yy03LjI1MywwLTEzLjEyLTUuODY3LTEzLjEyLTEzLjEyICAgIGMwLTcuMjUzLDUuODY3LTEzLjEyLDEzLjEyLTEzLjEyYzcuMjUzLDAsMTMuMTIsNS44NjcsMTMuMTIsMTMuMTJDMTIwLjMyLDEwNy44NCwxMTQuNDUzLDExMy43MDcsMTA3LjIsMTEzLjcwN3oiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xNjQuMDUzLDEzMC40NTNjLTE0LjkzMywwLTI2Ljk4NywxMi4wNTMtMjYuOTg3LDI2Ljk4N2MwLDE0LjkzMywxMi4wNTMsMjYuOTg3LDI2Ljk4NywyNi45ODcgICAgczI2Ljk4Ny0xMi4wNTMsMjYuOTg3LTI2Ljk4N0MxOTEuMDQsMTQyLjUwNywxNzguOTg3LDEzMC40NTMsMTY0LjA1MywxMzAuNDUzeiBNMTY0LjA1MywxNzAuNTZjLTcuMjUzLDAtMTMuMTItNS44NjctMTMuMTItMTMuMTIgICAgczUuODY3LTEzLjEyLDEzLjEyLTEzLjEyYzcuMjUzLDAsMTMuMTIsNS44NjcsMTMuMTIsMTMuMTJTMTcxLjMwNywxNzAuNTYsMTY0LjA1MywxNzAuNTZ6IiBmaWxsPSIjRkZGRkZGIi8Cgk8L2cCjwvZz4KPGcCgk8Zz4KCQkKCQkJPHJlY3QgeD0iMTU3LjA5NiIgeT0iODUuMTg2IiB0cmFuc2Zvcm09Im1hdHJpeCgwLjcwNjQgLTAuNzA3OCAwLjcwNzggMC43MDY0IDIuMTA1NSAxODkuMzEzNikiIHdpZHRoPSIxNDQuMzE5IiBoZWlnaHQ9IjEzLjg2NyIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2cCjxnPgoJPGcCgkJCgkJCTxyZWN0IHg9IjEyOC43NzUiIHk9IjEwOC44MTYiIHRyYW5zZm9ybT0ibWF0cml4KDAuNzA1OCAtMC43MDg0IDAuNzA4NCAwLjcwNTggLTUxLjQ0MjUgMTM0LjA4MDgpIiB3aWR0aD0iMTMuODY3IiBoZWlnaHQ9IjQwLjMyIiBmaWxsPSIjRkZGRkZGIi8Cgk8L2cCjwvZz4KPGcCgk8Zz4KCQk8cmVjdCB4PSIzMC40OTkiIHk9IjEzMy43MTYiIHRyYW5zZm9ybT0ibWF0cml4KDAuNzA3MSAtMC43MDcxIDAuNzA3MSAwLjcwNzEgLTc5Ljc5IDg4LjY2OTMpIiB3aWR0aD0iNzMuMjc5IiBoZWlnaHQ9IjEzLjg2NyIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2cCjxnPgoJPGcCgkJPHJlY3QgeD0iMC4yMTMiIHk9IjMwNy42MjciIHdpZHRoPSIzMjEuMDY3IiBoZWlnaHQ9IjEzLjg2NyIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2cCjxnPgoJPGcCgkJPHJlY3QgeD0iMjg3LjU3MyIgeT0iMTEzLjkyIiB3aWR0aD0iMTMuODY3IiBoZWlnaHQ9IjIwMC42NCIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2cCjxnPgoJPGcCgkJPHJlY3QgeD0iMTYwLjUzMyIgeT0iMjE0LjI5MyIgd2lkdGg9IjEzLjg2NyIgaGVpZ2h0PSIxMDAuMjY3IiBmaWxsPSIjRkZGRkZGIi8Cgk8L2cCjwvZz4KPGcCgk8Zz4KCQk8cmVjdCB4PSIyMC4wNTMiIHk9IjIzNC4zNDciIHdpZHRoPSIxMy44NjciIGhlaWdodD0iODAuMjEzIiBmaWxsPSIjRkZGRkZGIi8Cgk8L2cCjwvZz4KPGcCgk8Zz4KCQk8cmVjdCB4PSIxMDAuMjY3IiB5PSIxNzQuMDgiIHdpZHRoPSIxMy44NjciIGhlaWdodD0iMTQwLjQ4IiBmaWxsPSIjRkZGRkZGIi8Cgk8L2cCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPGcCjwvZz4KPC9zdmcCg==);
-    background-repeat: no-repeat;
-    background-position: 5px center;
-    margin-left: 15px;
-}
-.close{
-    width: 256px;
-    height: 256px;
-    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUwNS45NDMsNi4wNThjLTguMDc3LTguMDc3LTIxLjE3Mi04LjA3Ny0yOS4yNDksMEw2LjA1OCw0NzYuNjkzYy04LjA3Nyw4LjA3Ny04LjA3NywyMS4xNzIsMCwyOS4yNDkgICAgQzEwLjA5Niw1MDkuOTgyLDE1LjM5LDUxMiwyMC42ODMsNTEyYzUuMjkzLDAsMTAuNTg2LTIuMDE5LDE0LjYyNS02LjA1OUw1MDUuOTQzLDM1LjMwNiAgICBDNTE0LjAxOSwyNy4yMyw1MTQuMDE5LDE0LjEzNSw1MDUuOTQzLDYuMDU4eiIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUwNS45NDIsNDc2LjY5NEwzNS4zMDYsNi4wNTljLTguMDc2LTguMDc3LTIxLjE3Mi04LjA3Ny0yOS4yNDgsMGMtOC4wNzcsOC4wNzYtOC4wNzcsMjEuMTcxLDAsMjkuMjQ4bDQ3MC42MzYsNDcwLjYzNiAgICBjNC4wMzgsNC4wMzksOS4zMzIsNi4wNTgsMTQuNjI1LDYuMDU4YzUuMjkzLDAsMTAuNTg3LTIuMDE5LDE0LjYyNC02LjA1N0M1MTQuMDE4LDQ5Ny44NjYsNTE0LjAxOCw0ODQuNzcxLDUwNS45NDIsNDc2LjY5NHoiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
-    background-repeat: no-repeat
-}
